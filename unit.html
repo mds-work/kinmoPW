@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNI-T | Kinmo PW</title>
+  <style>
+    :root {
+      --blue:#0056b3;
+      --yellow:#ffcc00;
+      --red:#ff0000;
+      --nav-height:64px;
+    }
+    body {
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f5f5f5; /* light gray fallback */
+      color:#222;
+      line-height:1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top:0; left:0; right:0;
+      height: var(--nav-height);
+      background: rgba(0,0,0,0.8);
+      display:flex; align-items:center; justify-content:center;
+      z-index:100;
+    }
+    .nav-inner {
+      width:100%; max-width:1200px;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:0 1rem;
+    }
+    .logo { color:#fff; font-weight:700; }
+    .nav-links {
+      list-style:none; display:flex; gap:1.2rem; margin:0; padding:0;
+    }
+    .nav-links a { color:#fff; text-decoration:none; font-weight:600; }
+    .nav-links a:hover { color:var(--yellow); }
+
+    /* HERO */
+    .hero {
+      margin-top: var(--nav-height);
+      height: 35vh;
+      background: linear-gradient(to right, #222, #000); /* fallback */
+      background-image: url("https://www.soselectronic.com/novinky/obr/obr2859_p85ebec9f5772.jpg");
+      background-size: cover;
+      background-position: center;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; text-align:center;
+    }
+    .hero h1 {
+      font-size:2.5rem;
+      background: rgba(0,0,0,0.5);
+      padding:1rem 2rem;
+      border-radius:10px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin:auto;
+      border:1px solid #ddd; /* debug border so you SEE it */
+      background:white;
+    }
+    section h2 {
+      text-align:center;
+      margin-bottom:2rem;
+      font-size:2rem;
+      color:var(--blue);
+    }
+
+    /* ABOUT */
+    .about {
+      text-align:center;
+      max-width: 800px;
+      margin:auto;
+    }
+
+    /* BLOG GRID */
+    .blog-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:2rem;
+    }
+    .blog-card {
+      background:#f9f9f9;
+      border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      overflow:hidden;
+      transition:transform 0.3s;
+    }
+    .blog-card:hover { transform: translateY(-5px); }
+    .blog-card img {
+      width:100%; height:180px; object-fit:cover;
+    }
+    .blog-card .content {
+      padding:1rem;
+    }
+    .blog-card h3 {
+      margin-top:0;
+      color:var(--red);
+    }
+
+    /* VIDEOS */
+    .video-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap:2rem;
+    }
+    .video-grid iframe {
+      width:100%; height:200px;
+      border-radius:10px;
+      border:none;
+    }
+
+    /* FOOTER */
+    .footer-banner {
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:1rem;
+      margin-top:3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">Kinmo PW</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="unit.html">UNI-T</a></li>
+        <li><a href="brand2.html">Brand 2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>UNI-T Instruments</h1>
+  </section>
+
+  <!-- ABOUT UNI-T -->
+  <section>
+    <h2>About UNI-T</h2>
+    <div class="about">
+      <p>
+        UNI-T is a world-renowned provider of electronic test and measurement instruments. 
+        Known for reliability, precision, and affordability, UNI-T products are trusted by 
+        engineers, technicians, and industries worldwide.  
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOG POSTS -->
+  <section>
+    <h2>Latest Blogs</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/400x200.png?text=UNI-T+Blog+1" alt="Blog 1">
+        <div class="content">
+          <h3>How UNI-T Multimeters Simplify Diagnostics</h3>
+          <p>Learn how UNI-T digital multimeters provide fast and accurate measurements for everyday tasks.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/400x200.png?text=UNI-T+Blog+2" alt="Blog 2">
+        <div class="content">
+          <h3>UNI-T Oscilloscopes: Affordable Precision</h3>
+          <p>Discover the power of UNI-T oscilloscopes for labs and professionals on a budget.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="https://via.placeholder.com/400x200.png?text=UNI-T+Blog+3" alt="Blog 3">
+        <div class="content">
+          <h3>Why UNI-T is the Choice of Professionals</h3>
+          <p>A closer look at UNI-T’s reputation in the test and measurement industry.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED VIDEOS -->
+  <section>
+    <h2>Featured Videos</h2>
+    <div class="video-grid">
+      <iframe src="https://youtube.com/embded/7NZfWaT8Xvs" allowfullscreen></iframe>
+      <iframe src="https://youtube.com/embded/7NZfWaT8Xvs" allowfullscreen></iframe>
+      <iframe src="https://youtube.com/embded/7NZfWaT8Xvs" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-banner">
+    <p>&copy; 2025 Kinmo PW. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
